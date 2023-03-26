@@ -1,24 +1,25 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 import Home from './Home/Home'
 import About from './About/About'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import moon from './images/moon.jpg'
+import sun from './images/sun.jpg'
 import Projects from './Projects/Projects'
+import Skills from './Skills/Skills'
 
 export default function Container() {
+    const bg = useColorModeValue(sun, moon)
     return (
-        <Box height={"300vh"}>
-            <Parallax pages={3} className="parallax" >
-                <ParallaxLayer
-                    offset={0}
-                    className="parallaxLayer1"
-                    factor={3}
+        <Box height={"100vh"}>
+            <Parallax pages={4} className="parallax">
+                <ParallaxLayer offset={0}
+                    factor={4}
                     style={{
-                        background: `url(${moon})`,
-                        backgroundSize: "cover"
-                    }}
-                >
+                        background: `url(${bg})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center"
+                    }}>
                     <Home />
                 </ParallaxLayer>
 
@@ -28,6 +29,10 @@ export default function Container() {
 
                 <ParallaxLayer offset={2} speed={0.1}>
                     <Projects />
+                </ParallaxLayer>
+
+                <ParallaxLayer offset={3} speed={0.1}>
+                    <Skills />
                 </ParallaxLayer>
             </Parallax>
         </Box >

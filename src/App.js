@@ -10,13 +10,15 @@ import './App.css'
 
 function App() {
   const { toggleColorMode } = useColorMode();
-  const bg = useColorModeValue("#D9CAB3", "#11468F")
+  const bg = useColorModeValue("#D9CAB3", "black")
   const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
   const buttonbg = useColorModeValue("white", "#1A202C");
 
   return (
-    <div className="App">
-      <Box position={'fixed'} top={["83vh", "", "", "87vh"]} w={'100%'} zIndex='1'>
+    <div className="App" style={{
+      background: "black"
+    }}>
+      <Box position={'fixed'} top={["83vh", "", "", "87vh"]} w={'100%'} zIndex='2'>
         <motion.div>
           <Flex alignItems="center" bg={bg} justifyContent="space-between" gap="10px" w={["90%", "50%", "30%", "250px"]} margin="10px auto" padding='5px' borderRadius='10px'>
             <Nav />
