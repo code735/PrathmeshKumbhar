@@ -15,9 +15,7 @@ function App() {
   const buttonbg = useColorModeValue("white", "#1A202C");
 
   return (
-    <div className="App" style={{
-      background: "black"
-    }}>
+    <div className="App">
       <Box position={'fixed'} top={["83vh", "", "", "87vh"]} w={'100%'} zIndex='2'>
         <motion.div>
           <Flex alignItems="center" bg={bg} justifyContent="space-between" gap="10px" w={["90%", "50%", "30%", "250px"]} margin="10px auto" padding='5px' borderRadius='10px'>

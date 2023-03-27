@@ -13,7 +13,7 @@ import {
     Box,
     useColorModeValue
 } from "@chakra-ui/react"
-import { NavLink } from "react-router-dom";
+import { Tooltip } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 

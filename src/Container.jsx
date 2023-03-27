@@ -11,15 +11,10 @@ import Skills from './Skills/Skills'
 export default function Container() {
     const bg = useColorModeValue(sun, moon)
     return (
-        <Box height={"100vh"}>
-            <Parallax pages={4} className="parallax">
+        <Box height={"100vh"} background={`url(${bg})`} backgroundSize={'cover'}>
+            <Parallax pages={4} className="parallax" >
                 <ParallaxLayer offset={0}
-                    factor={4}
-                    style={{
-                        background: `url(${bg})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center"
-                    }}>
+                    factor={4}>
                     <Home />
                 </ParallaxLayer>
 
