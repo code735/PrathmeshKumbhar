@@ -65,3 +65,5 @@ export const Preloader = () => {
         </motion.div >
     );
 };
+
+// For adding preloader branch
