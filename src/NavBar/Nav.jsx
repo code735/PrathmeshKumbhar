@@ -6,11 +6,16 @@ import { BsCodeSlash } from 'react-icons/bs'
 import { MdWorkOutline } from 'react-icons/md'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsPerson } from 'react-icons/bs'
+import { useSelector, useDispatch } from 'react-redux'
+import { PRELOADER_TOGGLE_FUNCTION } from '../Redux/action'
 
 export default function Nav() {
     const { toggleColorMode } = useColorMode();
     const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
     const buttonbg = useColorModeValue("transparent", "transparent");
+
+    var togglepreloader = useSelector(state => state.togglepreloader);
+    var dispatch = useDispatch();
 
     return (
         <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
@@ -41,6 +46,7 @@ export default function Nav() {
             <Tooltip label={'Theme'} borderRadius={'5px'}>
                 <Button onClick={() => {
                     toggleColorMode();
+                    dispatch(PRELOADER_TOGGLE_FUNCTION(true));
                 }} px="2" bg={buttonbg}>
                     {icon}
                 </Button>

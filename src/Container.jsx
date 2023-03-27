@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import Home from './Home/Home'
 import About from './About/About'
@@ -7,11 +7,24 @@ import moon from './images/moon.jpg'
 import sun from './images/sun.jpg'
 import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
+import { Preloader } from './Preloader/Preloader'
+import { useSelector, useDispatch } from 'react-redux'
+import { PRELOADER_TOGGLE_FUNCTION } from './Redux/action'
 
 export default function Container() {
     const bg = useColorModeValue(sun, moon)
+
+    var togglepreloader = useSelector(state => state.togglepreloader);
+    var dispatch = useDispatch();
+
+    useEffect(() => {
+        setTimeout(() => {
+            dispatch(PRELOADER_TOGGLE_FUNCTION(false));
+        }, 2000);
+    })
+
     return (
-        <Box height={"100vh"} background={`url(${bg})`} backgroundSize={'cover'}>
+        togglepreloader ? <Preloader /> : <Box height={"100vh"} background={`url(${bg})`} backgroundSize={'cover'}>
             <Parallax pages={4} className="parallax" >
                 <ParallaxLayer offset={0}
                     factor={4}>
