@@ -17,7 +17,7 @@ export default function Container() {
     useEffect(() => {
         setTimeout(() => {
             dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-        }, 2000);
+        }, 3000);
     })
 
     return (
