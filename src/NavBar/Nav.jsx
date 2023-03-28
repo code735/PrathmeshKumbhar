@@ -21,25 +21,25 @@ export default function Nav() {
         <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
             <Tooltip label='Home'>
                 <a href='#home'>
-                    <Button px="2" bg={buttonbg}>
+                    <Button px="2" bg={buttonbg} borderRadius='0'>
                         <AiOutlineHome fontSize="1.3rem" />
                     </Button>
                 </a>
             </Tooltip>
             <Tooltip label="About">
                 <a href="#about">
-                    <Button px="2" bg={buttonbg}>
+                    <Button px="2" bg={buttonbg} borderRadius='0'>
                         <BsPerson fontSize="1.5rem" />
                     </Button>
                 </a>
             </Tooltip>
             <Tooltip label={'Projects'}>
-                <Button px="2" bg={buttonbg}>
+                <Button px="2" bg={buttonbg} borderRadius='0'>
                     <MdWorkOutline fontSize="1.3rem" />
                 </Button>
             </Tooltip>
             <Tooltip label={'Skills'}>
-                <Button px="2" bg={buttonbg}>
+                <Button px="2" bg={buttonbg} borderRadius='0'>
                     <BsCodeSlash fontSize="1.3rem" />
                 </Button>
             </Tooltip>
@@ -47,7 +47,7 @@ export default function Nav() {
                 <Button onClick={() => {
                     toggleColorMode();
                     dispatch(PRELOADER_TOGGLE_FUNCTION(true));
-                }} px="2" bg={buttonbg}>
+                }} px="2" bg={buttonbg} borderRadius='0'>
                     {icon}
                 </Button>
             </Tooltip>
