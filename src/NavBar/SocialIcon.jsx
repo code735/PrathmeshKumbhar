@@ -11,7 +11,7 @@ export default function SocialIcon() {
 
     return (
         <div>
-            <Flex height="100vh" flexDirection={"column"} justifyContent="center" position={"fixed"} px='4' zIndex={'1'}>
+            <Flex height="100vh" flexDirection={"column"} justifyContent="center" position={"fixed"} px='1' zIndex={'1'}>
                 <Flex flexDirection={"column"} alignItems="center" gap='10px' left='0'>
                     <Box height={'100px'} w="2px" bg={bg}></Box>
                     <NavLink to='https://github.com/code735' style={{ borderRadius: "50%", padding: "5px" }} target='_blank'>

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import Home from './Home/Home'
 import About from './About/About'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import { Preloader } from './Preloader/Preloader'
@@ -14,32 +13,22 @@ export default function Container() {
     var togglepreloader = useSelector(state => state.togglepreloader);
     var dispatch = useDispatch();
 
+    var bg = useColorModeValue("wheat", "#1A202C")
+
+
     useEffect(() => {
         setTimeout(() => {
             dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-        }, 3000);
+        }, 10);
     })
 
     return (
-        togglepreloader ? <Preloader /> : <Box height={"100vh"} backgroundSize={'cover'}>
-            <Parallax pages={4} className="parallax" >
-                <ParallaxLayer offset={0}
-                    factor={4}>
-                    <Home />
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={1} speed={0.1}>
-                    <About />
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={2} speed={0.1}>
-                    <Projects />
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={3} speed={0.1}>
-                    <Skills />
-                </ParallaxLayer>
-            </Parallax>
+        togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax">
+            <Home />
+            <About />
+            <Projects />
+            <Skills />
+            <Box className='sticky-img' position={'fixed'} top="0" background={`url('https://img2.wallspic.com/crops/3/3/5/6/2/126533/126533-mountain_range-purple-nature-illustration-atmosphere-3840x2160.jpg')`} w={'100%'} h={'100vh'} zIndex='-2'></Box>
         </Box >
     )
 }

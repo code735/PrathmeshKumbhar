@@ -2,3 +2,8 @@
   background: transparent;
   width: 0px;
 }
+
+body::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
