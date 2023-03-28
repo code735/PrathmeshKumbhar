@@ -14,10 +14,10 @@ export default function Home() {
             alignItems={"center"}
             id="home"
             bg={'transparent'}
-            border={`40px solid ${bg}`}
+            border={[`35px solid ${bg}`, `40px solid ${bg}`]}
         >
             <HStack justifyContent={"center"} alignItems={"center"} w="100%">
-                <Heading as='h1' fontSize={["1.5rem", "2rem", "3rem"]}>
+                <Heading as='h1' color={bg} fontSize={["1.5rem", "2rem", "3rem"]}>
                     Prathmesh
                 </Heading>
                 <Heading color={"#11468F"} fontSize={["1.5rem", "2rem", "3rem"]}>
