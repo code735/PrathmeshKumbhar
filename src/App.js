@@ -20,9 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <Box position={'fixed'} top={["83vh", "", "", "87vh"]} w={'100%'} zIndex='2'>
+      <Box position={'fixed'} w={'100%'} zIndex='2'>
         <motion.div>
-          <Flex alignItems="center" bg={bg} justifyContent="space-between" gap="10px" w={["90%", "50%", "30%", "250px"]} margin="10px auto" padding='5px'>
+          <Flex alignItems="center" justifyContent="space-between" bg={buttonbg} gap="10px" margin="0 auto" padding='5px 30px'>
             <Nav />
             <Button onClick={() => {
               toggleColorMode();

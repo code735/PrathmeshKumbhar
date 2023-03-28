@@ -2,10 +2,6 @@ import { Button, Flex, useColorMode, useColorModeValue, Tooltip } from '@chakra-
 import React from 'react'
 import { FiMoon } from 'react-icons/fi'
 import { CiSun } from 'react-icons/ci'
-import { BsCodeSlash } from 'react-icons/bs'
-import { MdWorkOutline } from 'react-icons/md'
-import { AiOutlineHome } from 'react-icons/ai'
-import { BsPerson } from 'react-icons/bs'
 import { useSelector, useDispatch } from 'react-redux'
 import { PRELOADER_TOGGLE_FUNCTION } from '../Redux/action'
 
@@ -22,25 +18,25 @@ export default function Nav() {
             <Tooltip label='Home'>
                 <a href='#home'>
                     <Button px="2" bg={buttonbg} borderRadius='0'>
-                        <AiOutlineHome fontSize="1.3rem" />
+                        Home
                     </Button>
                 </a>
             </Tooltip>
             <Tooltip label="About">
                 <a href="#about">
                     <Button px="2" bg={buttonbg} borderRadius='0'>
-                        <BsPerson fontSize="1.5rem" />
+                        About
                     </Button>
                 </a>
             </Tooltip>
             <Tooltip label={'Projects'}>
                 <Button px="2" bg={buttonbg} borderRadius='0'>
-                    <MdWorkOutline fontSize="1.3rem" />
+                    Project
                 </Button>
             </Tooltip>
             <Tooltip label={'Skills'}>
                 <Button px="2" bg={buttonbg} borderRadius='0'>
-                    <BsCodeSlash fontSize="1.3rem" />
+                    Skills
                 </Button>
             </Tooltip>
             <Tooltip label={'Theme'}>
