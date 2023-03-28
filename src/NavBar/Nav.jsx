@@ -19,31 +19,31 @@ export default function Nav() {
 
     return (
         <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
-            <Tooltip label='Home' borderRadius={'5px'}>
+            <Tooltip label='Home'>
                 <a href='#home'>
                     <Button px="2" bg={buttonbg}>
                         <AiOutlineHome fontSize="1.3rem" />
                     </Button>
                 </a>
             </Tooltip>
-            <Tooltip label="About" borderRadius={'5px'}>
+            <Tooltip label="About">
                 <a href="#about">
                     <Button px="2" bg={buttonbg}>
                         <BsPerson fontSize="1.5rem" />
                     </Button>
                 </a>
             </Tooltip>
-            <Tooltip label={'Projects'} borderRadius={'5px'}>
+            <Tooltip label={'Projects'}>
                 <Button px="2" bg={buttonbg}>
                     <MdWorkOutline fontSize="1.3rem" />
                 </Button>
             </Tooltip>
-            <Tooltip label={'Skills'} borderRadius={'5px'}>
+            <Tooltip label={'Skills'}>
                 <Button px="2" bg={buttonbg}>
                     <BsCodeSlash fontSize="1.3rem" />
                 </Button>
             </Tooltip>
-            <Tooltip label={'Theme'} borderRadius={'5px'}>
+            <Tooltip label={'Theme'}>
                 <Button onClick={() => {
                     toggleColorMode();
                     dispatch(PRELOADER_TOGGLE_FUNCTION(true));
