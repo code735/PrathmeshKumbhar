@@ -1,10 +1,10 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export const Preloader = () => {
     var [percentage, setPercentage] = useState(0);
-
+    var bg = useColorModeValue("wheat", "#1A202C");
     useEffect(() => {
         const interval = setInterval(() => {
             if (percentage < 100) {
@@ -17,9 +17,6 @@ export const Preloader = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
             style={{
                 display: "flex",
                 flexDirection: "column",
@@ -27,10 +24,13 @@ export const Preloader = () => {
                 justifyContent: "center",
                 height: "100vh",
                 width: "100%",
-                overflow: "hidden"
+                overflow: "hidden",
+                position: "relative",
+                zIndex: "2",
+                background: bg
             }}
         >
-            <Heading fontSize={['6rem', '10rem', '15rem', '20rem']} >{percentage}%</Heading>
+            <Heading fontSize={['8rem', '10rem', '15rem', '20rem']} >{percentage}%</Heading>
         </motion.div >
     );
 };
