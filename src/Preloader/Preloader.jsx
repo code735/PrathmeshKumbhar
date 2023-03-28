@@ -26,42 +26,11 @@ export const Preloader = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 height: "100vh",
-                width: "100%"
+                width: "100%",
+                overflow: "hidden"
             }}
         >
-            <div
-                style={{
-                    width: "100px",
-                    height: "100px",
-                    position: "relative",
-                    border: "5px solid"
-                }}
-            >
-                <h1
-                    style={{
-                        position: "absolute",
-                        bottom: "0",
-                        margin: "0",
-                        left: "10px",
-                        fontSize: "3rem",
-                        fontWeight: "bold"
-                    }}
-                >
-                    Pr
-                </h1>
-                <h3
-                    style={{
-                        position: "absolute",
-                        top: "10px",
-                        margin: "0",
-                        right: "10px",
-                        fontWeight: "bold"
-                    }}
-                >
-                    21
-                </h3>
-            </div>
-            <Heading fontSize={'4rem'} marginTop={'20px'}>{percentage}%</Heading>
+            <Heading fontSize={['6rem', '10rem', '15rem', '20rem']} >{percentage}%</Heading>
         </motion.div >
     );
 };
