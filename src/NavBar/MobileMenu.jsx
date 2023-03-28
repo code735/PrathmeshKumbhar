@@ -13,19 +13,17 @@ import {
     Box,
     useColorModeValue
 } from "@chakra-ui/react"
-import { Tooltip } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 
 export default function MobileMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const buttonbg = useColorModeValue("white", "#1A202C");
     const bg = useColorModeValue("#D9CAB3", "#495579")
 
     return (
         <>
             <Box display={["", "", "", "none"]} justifyContent="flex-end">
-                <Button as={IconButton} onClick={onOpen} icon={<HamburgerIcon />} bg={buttonbg} />
+                <Button as={IconButton} onClick={onOpen} icon={<HamburgerIcon />} bg={'transparent'} />
                 <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
                     <DrawerOverlay />
                     <DrawerContent bg={bg}>
