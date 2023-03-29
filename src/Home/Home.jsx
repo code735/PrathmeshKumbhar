@@ -8,7 +8,7 @@ export default function Home() {
         <Box
             margin={'auto'}
             flexDirection={"column"}
-            height={'100vh'}
+            height={'90vh'}
             display="flex"
             justifyContent={"center"}
             alignItems={"center"}
