@@ -15,38 +15,28 @@ export default function Nav() {
 
     return (
         <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
-            <Tooltip label='Home'>
-                <a href='#home'>
-                    <Button px="2" bg={buttonbg} borderRadius='0'>
-                        Home
-                    </Button>
-                </a>
-            </Tooltip>
-            <Tooltip label="About">
-                <a href="#about">
-                    <Button px="2" bg={buttonbg} borderRadius='0'>
-                        About
-                    </Button>
-                </a>
-            </Tooltip>
-            <Tooltip label={'Projects'}>
+            <a href='#home'>
                 <Button px="2" bg={buttonbg} borderRadius='0'>
-                    Project
+                    Home
                 </Button>
-            </Tooltip>
-            <Tooltip label={'Skills'}>
+            </a>
+            <a href="#about">
                 <Button px="2" bg={buttonbg} borderRadius='0'>
-                    Skills
+                    About
                 </Button>
-            </Tooltip>
-            <Tooltip label={'Theme'}>
-                <Button onClick={() => {
-                    toggleColorMode();
-                    dispatch(PRELOADER_TOGGLE_FUNCTION(true));
-                }} px="2" bg={buttonbg} borderRadius='0'>
-                    {icon}
-                </Button>
-            </Tooltip>
+            </a>
+            <Button px="2" bg={buttonbg} borderRadius='0'>
+                Project
+            </Button>
+            <Button px="2" bg={buttonbg} borderRadius='0'>
+                Skills
+            </Button>
+            <Button onClick={() => {
+                toggleColorMode();
+                dispatch(PRELOADER_TOGGLE_FUNCTION(true));
+            }} px="2" bg={buttonbg} borderRadius='0'>
+                {icon}
+            </Button>
         </Flex >
     )
 }
