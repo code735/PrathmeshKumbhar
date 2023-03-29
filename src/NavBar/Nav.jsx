@@ -4,6 +4,7 @@ import { FiMoon } from 'react-icons/fi'
 import { CiSun } from 'react-icons/ci'
 import { useSelector, useDispatch } from 'react-redux'
 import { PRELOADER_TOGGLE_FUNCTION } from '../Redux/action'
+import { motion } from 'framer-motion'
 
 export default function Nav() {
     const { toggleColorMode } = useColorMode();
@@ -25,12 +26,16 @@ export default function Nav() {
                     About
                 </Button>
             </a>
-            <Button px="2" bg={buttonbg} borderRadius='0'>
-                Project
-            </Button>
-            <Button px="2" bg={buttonbg} borderRadius='0'>
-                Skills
-            </Button>
+            <a href="#projects">
+                <Button px="2" bg={buttonbg} borderRadius='0'>
+                    Project
+                </Button>
+            </a>
+            <a href="#skills">
+                <Button px="2" bg={buttonbg} borderRadius='0'>
+                    Skills
+                </Button>
+            </a>
             <Button onClick={() => {
                 toggleColorMode();
                 dispatch(PRELOADER_TOGGLE_FUNCTION(true));

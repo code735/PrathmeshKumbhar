@@ -3,6 +3,7 @@ import React from 'react'
 import { BsGithub, BsSlack } from 'react-icons/bs'
 import { ImLinkedin2 } from 'react-icons/im'
 import { NavLink } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function SocialIcon() {
     const color = useColorModeValue("#11468F", "white")
@@ -11,7 +12,11 @@ export default function SocialIcon() {
     const navbarbg = useColorModeValue("white", "black");
 
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+        >
             <Flex justifyContent="center" position={"fixed"} px='1' bottom={['15px', '30px']} width={'100%'} py={'10px'} zIndex={'1'}>
                 <Flex alignItems="center" gap='10px' left='0'>
 
@@ -27,6 +32,6 @@ export default function SocialIcon() {
 
                 </Flex>
             </Flex>
-        </div >
+        </motion.div >
     )
 }

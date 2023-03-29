@@ -9,7 +9,7 @@ import { store } from './Redux/Store.js';
 
 ReactDOM.render(
     <React.StrictMode>
-        <ColorModeScript initialColorMode="dark" />
+        <ColorModeScript initialColorMode="light" />
         <Provider store={store}>
             <ChakraProvider>
                 <BrowserRouter>

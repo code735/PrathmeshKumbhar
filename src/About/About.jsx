@@ -7,7 +7,7 @@ import {
 import React from 'react'
 
 export default function About() {
-    var bg = useColorModeValue("wheat", "#1A202C")
+    var bg = useColorModeValue("#EDECEC", "#1A202C")
 
     return (
         <Box
