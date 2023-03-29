@@ -11,7 +11,7 @@ import {
 import { BsArrowRight } from 'react-icons/bs'
 
 export default function About() {
-    var bg = useColorModeValue("#EDECEC", "black")
+    var bg = useColorModeValue("wheat", "black")
     var textColor = useColorModeValue("black", "white")
 
     return (
@@ -20,25 +20,8 @@ export default function About() {
             <Box
                 width={'50%'}
                 display={["none", "", "", "block"]}
+                background={bg}
             >
-                <Box
-                    border={`30px solid ${bg}`}
-                    height={'100%'}
-                    background='##0000005c'
-                    display={'flex'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                >
-                    <Box width={'300px'} bg={bg} p={'0 20px'}>
-                        <Image src={pic} objectFit={'cover'} />
-                        <Flex justifyContent={'space-between'} alignItems={'center'}>
-                            <Heading p={'15px 0'}>
-                                LinkedIn
-                            </Heading>
-                            <BsArrowRight fontSize={'2.5rem'} />
-                        </Flex>
-                    </Box>
-                </Box>
             </Box>
             <Box
                 width={["", "", "", '50%']}
