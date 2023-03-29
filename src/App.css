@@ -7,3 +7,11 @@ body::-webkit-scrollbar {
   background: transparent;
   width: 0px;
 }
+.project_btn {
+  color: white;
+}
+.project_btn:hover {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
