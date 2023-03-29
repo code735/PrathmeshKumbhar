@@ -14,7 +14,7 @@ function App() {
   const { toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#D9CAB3", "#092D3D")
   const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
-  const buttonbg = useColorModeValue("white", "#154C6B");
+  const buttonbg = useColorModeValue("white", "#1A202C");
   var togglepreloader = useSelector(state => state.togglepreloader);
   var dispatch = useDispatch();
 

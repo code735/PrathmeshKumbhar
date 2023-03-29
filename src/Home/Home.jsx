@@ -4,7 +4,7 @@ import { useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 export default function Home() {
-    var bg = useColorModeValue("wheat", "#1A202C")
+    var bg = useColorModeValue("wheat", "black")
     var color = useColorModeValue("white", "white")
 
     return (
