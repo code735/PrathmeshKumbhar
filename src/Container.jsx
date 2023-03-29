@@ -23,6 +23,15 @@ export default function Container() {
         }, 2000);
     })
 
+    useEffect(() => {
+        window.onload = () => {
+            setTimeout(() => {
+                dispatch(PRELOADER_TOGGLE_FUNCTION(false));
+            }, 3000);
+        };
+    }, []);
+
+
     return (
         togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax">
             <Home />
