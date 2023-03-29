@@ -19,6 +19,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 export default function MobileMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const bg = useColorModeValue("#D9CAB3", "#495579")
+    const color = useColorModeValue("black", "white")
 
     return (
         <>
@@ -33,19 +34,19 @@ export default function MobileMenu() {
                         <DrawerBody>
                             <Flex flexDirection="column" spacing="6" gap="20px" justifyContent={"center"} alignItems={"flex-start"} color="white">
                                 <a href="#home">
-                                    <Heading as='h1' noOfLines={1} width="100%">
+                                    <Heading as='h1' noOfLines={1} width="100%" color={color}>
                                         Home
                                     </Heading>
                                 </a>
                                 <a href="#about">
-                                    <Heading as='h1' noOfLines={1} width="100%">
+                                    <Heading as='h1' noOfLines={1} width="100%" color={color}>
                                         About
                                     </Heading>
                                 </a>
-                                <Heading as='h1' noOfLines={1} width="100%">
+                                <Heading as='h1' noOfLines={1} width="100%" color={color}>
                                     Project
                                 </Heading>
-                                <Heading as='h1' noOfLines={1} width="100%" paddingBottom="20px">
+                                <Heading as='h1' noOfLines={1} width="100%" paddingBottom="20px" color={color}>
                                     Skills
                                 </Heading>
                             </Flex>
