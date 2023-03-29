@@ -14,8 +14,7 @@ export default function Container() {
 
     var togglepreloader = useSelector(state => state.togglepreloader);
     var dispatch = useDispatch();
-    var bg = useColorModeValue("wheat", "#1A202C")
-    var bgimg = useColorModeValue(lightmountain, darkmountain)
+    var bgimg = lightmountain;
 
     useEffect(() => {
         setTimeout(() => {
@@ -44,6 +43,7 @@ export default function Container() {
                 top="0"
                 background={`url(${bgimg})`}
                 backgroundSize={'cover'}
+                backgroundPosition={"top"}
                 w={'100%'}
                 h={'100vh'}
                 zIndex='-2'
