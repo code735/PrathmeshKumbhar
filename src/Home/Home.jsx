@@ -17,7 +17,7 @@ export default function Home() {
             alignItems={"center"}
             id="home"
             bg={'transparent'}
-            border={[`20px solid ${bg}`, `30px solid ${bg}`]}
+            border={'none'}
         >
             <motion.div
                 initial={{ opacity: 0, y: 200 }}
