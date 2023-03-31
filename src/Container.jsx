@@ -46,14 +46,17 @@ export default function Container() {
                 className='sticky-img'
                 position={'fixed'}
                 top="0"
-                backgroundSize={'cover'}
-                backgroundPosition={"top"}
+                bgImage={[`url(${bgimg})`]}
+                bgSize={'cover'}
+                bgPosition={"top"}
+                bgRepeat="no-repeat"
                 w={'100%'}
                 h={'100vh'}
                 zIndex='-2'
             >
                 <VideoPlayer />
             </Box>
+
         </Box >
     )
 }

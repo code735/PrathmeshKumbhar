@@ -29,7 +29,7 @@ export default function MobileMenu() {
                     <DrawerOverlay />
                     <DrawerContent bg={bg}>
                         <DrawerHeader borderBottomWidth='1px' border='none' display="flex" justifyContent="flex-end" alignItems="center" p="2">
-                            <Button as={IconButton} fontSize="1rem" p='0' bg={'transparent'} fontWeight='bold' onClick={onClose} icon={<CloseIcon />} />
+                            <Button as={IconButton} fontSize="1rem" p='0' bg={bg} fontWeight='bold' onClick={onClose} icon={<CloseIcon />} />
                         </DrawerHeader>
                         <DrawerBody>
                             <Flex flexDirection="column" spacing="6" gap="20px" justifyContent={"center"} alignItems={"flex-start"} color="white">
