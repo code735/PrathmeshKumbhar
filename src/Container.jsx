@@ -6,7 +6,7 @@ import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import { Preloader } from './Preloader/Preloader'
 import { useSelector, useDispatch } from 'react-redux'
-import { PRELOADER_TOGGLE_FUNCTION } from './Redux/action'
+import { NAVBAR_BACKGROUND_BG_FUNCTION, PRELOADER_TOGGLE_FUNCTION } from './Redux/action'
 import darkmountain from './images/dark.jpg'
 import lightmountain from './images/light.jpg'
 import video from './video/bg.mp4'
@@ -15,7 +15,6 @@ import VideoPlayer from './VideoPlayer'
 export default function Container() {
 
     var togglepreloader = useSelector(state => state.togglepreloader);
-    var navbarbg = useSelector(state => state.navbarBg);
     var dispatch = useDispatch();
     var bgimg = lightmountain;
 
@@ -33,11 +32,14 @@ export default function Container() {
         };
     }, []);
 
+    useEffect(() => {
+        window.onscroll = () => {
+            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true));
+        }
+    }, [])
 
     return (
-        togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax" onScroll={() => {
-            console.log(navbarbg)
-        }}>
+        togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax">
             <Home />
             <About />
             <Projects />

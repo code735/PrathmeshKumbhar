@@ -15,12 +15,13 @@ function App() {
   const bg = useColorModeValue("#D9CAB3", "#092D3D")
   const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
   const buttonbg = useColorModeValue("white", "#060116");
-  var togglepreloader = useSelector(state => state.togglepreloader);
   var dispatch = useDispatch();
+  var navbarbg = useSelector(state => state.navbarBg);
+
 
   return (
     <div className="App">
-      <Box position={'fixed'} w={['100%']} margin={'auto'} zIndex='2' bg={'transparent'}>
+      <Box position={'fixed'} w={['100%']} margin={'auto'} zIndex='2' bg={navbarbg ? 'black' : 'transparent'}>
         <motion.div>
           <Flex alignItems="center" justifyContent="space-between" bg={'transparent'} gap="10px" margin="0 auto" padding='5px 30px'>
             <Nav />
