@@ -15,7 +15,7 @@ export default function Nav() {
     var dispatch = useDispatch();
 
     return (
-        <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
+        <Flex display={["none", "", "", "flex"]} width="50%" justifyContent="space-between" alignItems="center">
             <a href='#home'>
                 <Button px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                     Home
