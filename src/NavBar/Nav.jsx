@@ -17,29 +17,29 @@ export default function Nav() {
     return (
         <Flex display={["none", "", "", "flex"]} width="100%" justifyContent="space-between" alignItems="center">
             <a href='#home'>
-                <Button px="2" bg={buttonbg} borderRadius='0'>
+                <Button px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                     Home
                 </Button>
             </a>
             <a href="#about">
-                <Button px="2" bg={buttonbg} borderRadius='0'>
+                <Button px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                     About
                 </Button>
             </a>
             <a href="#projects">
-                <Button px="2" bg={buttonbg} borderRadius='0'>
+                <Button px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                     Project
                 </Button>
             </a>
             <a href="#skills">
-                <Button px="2" bg={buttonbg} borderRadius='0'>
+                <Button px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                     Skills
                 </Button>
             </a>
             <Button onClick={() => {
                 toggleColorMode();
                 dispatch(PRELOADER_TOGGLE_FUNCTION(true));
-            }} px="2" bg={buttonbg} borderRadius='0'>
+            }} px="2" bg={buttonbg} borderRadius='0' color={'white'}>
                 {icon}
             </Button>
         </Flex >
