@@ -1,7 +1,10 @@
 import React from 'react'
-import { Box, Heading, HStack } from '@chakra-ui/react'
+import { Box, Heading, HStack, Image } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import logo from '../images/logo.svg'
+import circle from '../images/circle.svg'
+import email from '../images/email.svg'
 
 export default function Home() {
     var bg = useColorModeValue("wheat", "black")
@@ -16,11 +19,11 @@ export default function Home() {
             justifyContent={"center"}
             alignItems={"center"}
             id="home"
-            bg={['transparent', '', '', '#00000063']}
+            bg={['transparent', '', '', '#000000c4']}
             border={'none'}
         >
             <motion.div
-                initial={{ opacity: 0, y: 200 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 2 }}
                 style={{
@@ -52,7 +55,47 @@ export default function Home() {
                         PROJECTS
                     </Heading>
                 </a>
-            </motion.div>
+
+                <Box
+                    display={["none", "", "", "block"]}
+                    width={'150px'}
+                    position={'absolute'}
+                    right={'2rem'}
+                    bottom={'2rem'}
+                >
+                    <Box
+                        position={'relative'}
+                        top={'0'}
+                        left={'0'}
+                        display={'flex'}
+                        justifyContent={'center'}
+                        alignItems={'center'}
+                    >
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 20, repeat: Infinity }}
+                        >
+                            <Image src={circle}></Image>
+                        </motion.div>
+                        <Box
+                            position={'absolute'}
+                            width={'40px'}
+                        >
+                            <Image src={logo}></Image>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box
+                    position={'absolute'}
+                    display={["none", "", "", "block"]}
+                    w={'1.2rem'}
+                    left={'20px'}
+                    bottom={'30px'}
+                >
+                    <Image src={email}></Image>
+                </Box>
+            </motion.div >
         </Box >
     )
 }

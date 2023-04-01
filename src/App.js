@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import MobileMenu from './NavBar/MobileMenu';
-import { Flex, useColorModeValue, useColorMode, Button, Box } from '@chakra-ui/react';
+import { Flex, useColorModeValue, useColorMode, Button, Box, Heading, Image } from '@chakra-ui/react';
 import Nav from './NavBar/Nav';
 import { CiSun } from 'react-icons/ci';
 import { FiMoon } from 'react-icons/fi';
@@ -10,6 +10,7 @@ import { motion } from 'framer-motion'
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { PRELOADER_TOGGLE_FUNCTION } from './Redux/action';
+import logo from './images/logo.svg'
 
 function App() {
   const { toggleColorMode } = useColorMode();
@@ -28,7 +29,7 @@ function App() {
   useEffect(() => {
     function handleScroll() {
       const scrollTop = window.pageYOffset;
-      if (scrollTop >= 300) {
+      if (scrollTop >= 150) {
         setOpacity(1);
       } else {
         setOpacity(0);
@@ -44,9 +45,12 @@ function App() {
 
   return (
     <div className="App">
-      <Box position={'fixed'} w={['100%']} margin={'auto'} zIndex='1' id='myDiv'>
+      <Box position={'fixed'} w={['100%']} margin={'auto'} py={'2'} zIndex='1' id='myDiv'>
         <motion.div>
           <Flex alignItems="center" justifyContent="space-between" bg={'transparent'} gap="10px" margin="0 auto" padding='5px 30px'>
+            <Box width={'20px'} display={["none", "", "", "block"]}>
+              <Image src={logo}  ></Image>
+            </Box>
             <Nav />
             <Button onClick={() => {
               toggleColorMode();
@@ -58,13 +62,16 @@ function App() {
           </Flex>
         </motion.div>
       </Box>
-      <Box position={'fixed'} w={['100%']} margin={'auto'} zIndex='2' id='myDiv' style={{
+      <Box position={'fixed'} w={['100%']} margin={'auto'} py={'2'} zIndex='2' id='myDiv' style={{
         background: "black",
         opacity: opacity,
         transition: 'opacity 1s ease-in-out'
       }}>
         <motion.div>
           <Flex alignItems="center" justifyContent="space-between" bg={'transparent'} gap="10px" margin="0 auto" padding='5px 30px'>
+            <Box width={'20px'} display={["none", "", "", "block"]}>
+              <Image src={logo}  ></Image>
+            </Box>
             <Nav />
             <Button onClick={() => {
               toggleColorMode();
