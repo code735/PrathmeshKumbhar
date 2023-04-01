@@ -17,7 +17,7 @@ export default function reducer(state = initialstate, { type, payload }) {
         case NAVBAR_BACKGROUND_BG:
             return {
                 ...state,
-                navbarBg: true
+                navbarBg: payload
             }
 
         default:

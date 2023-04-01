@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import Home from './Home/Home'
 import About from './About/About'
@@ -13,16 +13,15 @@ import video from './video/bg.mp4'
 import VideoPlayer from './VideoPlayer'
 
 export default function Container() {
-
-    var togglepreloader = useSelector(state => state.togglepreloader);
-    var dispatch = useDispatch();
-    var bgimg = lightmountain;
+    const dispatch = useDispatch();
+    const togglepreloader = useSelector(state => state.togglepreloader);
+    const bgimg = lightmountain;
 
     useEffect(() => {
         setTimeout(() => {
             dispatch(PRELOADER_TOGGLE_FUNCTION(false));
         }, 3000);
-    })
+    }, [togglepreloader])
 
     useEffect(() => {
         window.onload = () => {
@@ -30,16 +29,28 @@ export default function Container() {
                 dispatch(PRELOADER_TOGGLE_FUNCTION(false));
             }, 3000);
         };
-    }, []);
+    }, [togglepreloader]);
+
+    function handleScroll() {
+        const scrollTop = document.documentElement.scrollTop;
+        if (scrollTop === 0) {
+            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true));
+        } else if (scrollTop === 1000) {
+            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(false));
+        }
+    }
 
     useEffect(() => {
-        window.onscroll = () => {
-            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true));
-        }
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
+    useEffect(() => {
+        console.log(togglepreloader)
+    }, [togglepreloader])
+
     return (
-        togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax">
+        togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax" >
             <Home />
             <About />
             <Projects />
@@ -58,7 +69,6 @@ export default function Container() {
             >
                 <VideoPlayer />
             </Box>
-
-        </Box >
+        </Box>
     )
 }

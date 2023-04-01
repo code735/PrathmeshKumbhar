@@ -20,3 +20,14 @@ body::-webkit-scrollbar {
   color: black;
   font-weight: bold;
 }
+
+.my-div {
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.my-div.visible {
+  background-color: black;
+  opacity: 1;
+}

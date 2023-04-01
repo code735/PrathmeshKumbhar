@@ -16,7 +16,7 @@ export default function Home() {
             justifyContent={"center"}
             alignItems={"center"}
             id="home"
-            bg={'transparent'}
+            bg={['transparent', '', '', '#00000063']}
             border={'none'}
         >
             <motion.div
@@ -40,7 +40,8 @@ export default function Home() {
                 <a href="#projects" className='project_btn' style={{
                     border: "2px solid white",
                     padding: "10px 20px",
-                    transition: ".6s"
+                    transition: ".6s",
+                    margin: "2rem 0"
                 }}>
                     <Heading as='h1'
                         fontSize={".8rem"}
