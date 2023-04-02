@@ -8,7 +8,7 @@ export default function About() {
         <Box w={'100%%'} bg={bg} margin={"auto"} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="projects">
             <VStack>
                 <Heading fontSize={[".7rem", "", "", "", "1.5rem"]}>
-                    Hello How Are you Im under the water
+                    Work In Progress
                 </Heading>
             </VStack>
         </Box>
