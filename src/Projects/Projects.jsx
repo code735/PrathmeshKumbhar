@@ -2,7 +2,7 @@ import { Box, Heading, VStack, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 
 export default function About() {
-    var bg = useColorModeValue("wheat", "#1A202C")
+    var bg = useColorModeValue("wheat", "black")
 
     return (
         <Box w={'100%%'} bg={bg} margin={"auto"} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="projects">

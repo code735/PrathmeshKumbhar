@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     function handleScroll() {
       const scrollTop = window.pageYOffset;
-      if (scrollTop >= 20) {
+      if (scrollTop >= 10) {
         setOpacity(1);
       } else {
         setOpacity(0);
