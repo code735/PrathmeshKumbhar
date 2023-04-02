@@ -8,7 +8,7 @@ export default function Skills() {
         <Box w={'100%'} margin={"auto"} bg={bg} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="skills">
             <VStack>
                 <Heading fontSize={[".7rem", "", "", "", "1.5rem"]}>
-                    Skills
+                    Work In Progress
                 </Heading>
             </VStack>
         </Box>
