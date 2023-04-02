@@ -21,6 +21,7 @@ export default function Home() {
             id="home"
             bg={['transparent', '', '', '#000000c4']}
             border={'none'}
+            width={'100vw'}
         >
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -29,7 +30,8 @@ export default function Home() {
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center"
+                    alignItems: "center",
+                    width: "100%"
                 }}
             >
                 <HStack justifyContent={"center"} alignItems={"center"} w="100%">
@@ -55,47 +57,46 @@ export default function Home() {
                         PROJECTS
                     </Heading>
                 </a>
-
+            </motion.div >
+            <Box
+                display={["none", "", "", "block"]}
+                width={'150px'}
+                position={'absolute'}
+                right={'2rem'}
+                bottom={'2rem'}
+            >
                 <Box
-                    display={["none", "", "", "block"]}
-                    width={'150px'}
-                    position={'absolute'}
-                    right={'2rem'}
-                    bottom={'2rem'}
+                    position={'relative'}
+                    top={'0'}
+                    left={'0'}
+                    display={'flex'}
+                    justifyContent={'center'}
+                    alignItems={'center'}
                 >
-                    <Box
-                        position={'relative'}
-                        top={'0'}
-                        left={'0'}
-                        display={'flex'}
-                        justifyContent={'center'}
-                        alignItems={'center'}
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity }}
                     >
-                        <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 20, repeat: Infinity }}
-                        >
-                            <Image src={circle}></Image>
-                        </motion.div>
-                        <Box
-                            position={'absolute'}
-                            width={'40px'}
-                        >
-                            <Image src={logo}></Image>
-                        </Box>
+                        <Image src={circle}></Image>
+                    </motion.div>
+                    <Box
+                        position={'absolute'}
+                        width={'40px'}
+                    >
+                        <Image src={logo}></Image>
                     </Box>
                 </Box>
+            </Box>
 
-                <Box
-                    position={'absolute'}
-                    display={["none", "", "", "block"]}
-                    w={'1.2rem'}
-                    left={'20px'}
-                    bottom={'30px'}
-                >
-                    <Image src={email}></Image>
-                </Box>
-            </motion.div >
+            <Box
+                position={'absolute'}
+                display={["none", "", "", "block"]}
+                w={'1.2rem'}
+                left={'20px'}
+                bottom={'30px'}
+            >
+                <Image src={email}></Image>
+            </Box>
         </Box >
     )
 }
