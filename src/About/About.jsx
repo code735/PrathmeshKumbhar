@@ -1,5 +1,4 @@
 import React from 'react'
-import pic from '../images/profile-pic.png'
 import {
     Box,
     Heading,
@@ -8,7 +7,7 @@ import {
     useColorModeValue,
     Image
 } from '@chakra-ui/react'
-import { BsArrowRight } from 'react-icons/bs'
+import about from '../images/about.jpg'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
@@ -19,9 +18,20 @@ export default function About() {
         <Flex>
             <Box
                 width={'50%'}
-                display={["none", "", "", "block"]}
-                background={bg}
+                display={["none", "", "", "flex"]}
+                justifyContent={'center'}
+                alignItems={'center'}
+                bg={`url(${about})`}
+                backgroundRepeat={'no-repeat'}
+                backgroundSize={'cover'}
             >
+                <Box
+                    border={'5px solid white'}
+                    width={'90%'}
+                    height={'90%'}
+                >
+
+                </Box>
             </Box>
             <Box
                 width={["", "", "", '50%']}

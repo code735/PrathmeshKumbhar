@@ -20,16 +20,8 @@ export default function Container() {
     useEffect(() => {
         setTimeout(() => {
             dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-        }, 3000);
+        }, 4000);
     }, [togglepreloader])
-
-    useEffect(() => {
-        window.onload = () => {
-            setTimeout(() => {
-                dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-            }, 3000);
-        };
-    }, [togglepreloader]);
 
     function handleScroll() {
         const scrollTop = document.documentElement.scrollTop;
