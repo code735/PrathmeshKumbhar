@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export const Preloader = () => {
     var [percentage, setPercentage] = useState(0);
-    var bg = useColorModeValue("wheat", "#1A202C");
+    var bg = useColorModeValue("wheat", "black");
     useEffect(() => {
         const interval = setInterval(() => {
             if (percentage < 100) {
