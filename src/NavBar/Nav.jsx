@@ -19,12 +19,12 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import { useDisclosure } from '@chakra-ui/react'
 
 export default function Nav() {
-    const { toggleColorMode } = useColorMode();
-    const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
+    // const { toggleColorMode } = useColorMode();
+    // const icon = useColorModeValue(<FiMoon fontSize="1.3rem" />, <CiSun fontSize="1.5rem" />)
     const buttonbg = useColorModeValue("transparent", "transparent");
 
-    var togglepreloader = useSelector(state => state.togglepreloader);
-    var dispatch = useDispatch();
+    // var togglepreloader = useSelector(state => state.togglepreloader);
+    // var dispatch = useDispatch();
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
