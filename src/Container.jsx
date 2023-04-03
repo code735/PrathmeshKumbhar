@@ -18,9 +18,11 @@ export default function Container() {
     const bgimg = lightmountain;
 
     useEffect(() => {
-        setTimeout(() => {
-            dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-        }, 4000);
+        window.onload = () => {
+            setTimeout(() => {
+                dispatch(PRELOADER_TOGGLE_FUNCTION(false));
+            }, 4000);
+        }
     }, [togglepreloader])
 
     function handleScroll() {
