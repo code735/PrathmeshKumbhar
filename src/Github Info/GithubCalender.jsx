@@ -16,6 +16,7 @@ export function GithubContributions() {
                     color: "black"
                 }}
                 letterSpacing={'3px'}
+                fontWeight={'400'}
             >GitHub Contributions</Button>
 
             <Modal isOpen={isOpen} onClose={onClose}>

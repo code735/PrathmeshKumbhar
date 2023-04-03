@@ -29,7 +29,7 @@ export default function About() {
                 backgroundSize={'cover'}
             >
                 <Box
-                    border={'5px solid white'}
+                    border={'2px solid white'}
                     width={'90%'}
                     height={'90%'}
                 >
@@ -54,10 +54,10 @@ export default function About() {
                                 borderRadius={'100%'}
                             ></Image>
                             <Box>
-                                <Heading fontWeight={'400'} as={'h1'} color={'white'}>
+                                <Heading fontWeight={'200'} as={'h1'} color={'white'}>
                                     Prathmesh Kumbhar
                                 </Heading>
-                                <Heading fontWeight={'400'} fontSize={'1.5rem'} color={'white'}>
+                                <Heading fontWeight={'200'} fontSize={'1.5rem'} color={'white'}>
                                     Fullstack Developer
                                 </Heading>
                             </Box>
