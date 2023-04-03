@@ -20,16 +20,16 @@ export const GithubStat = () => {
                 justifyContent={'space-between'}
                 color={'white'}
             >
-                <Heading as={'h3'} fontWeight={'500'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
                     Username : {userData.username}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'500'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
                     Followers : {userData.followers}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'500'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
                     Repositories : {userData.public_repos}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'500'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
                     Forks : {userData.total_forks}
                 </Heading>
             </Flex>
