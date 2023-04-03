@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Box,
     Heading,
@@ -8,6 +8,9 @@ import {
     Image
 } from '@chakra-ui/react'
 import about from '../images/about.jpg'
+import profile from '../images/profile.jpg'
+import { GithubStat } from '../Github Info/GithubStats'
+import { GithubContributions } from '../Github Info/GithubCalender'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
@@ -30,7 +33,38 @@ export default function About() {
                     width={'90%'}
                     height={'90%'}
                 >
-
+                    <Box
+                        w={'90%'}
+                        p={'40px'}
+                        margin={'auto'}
+                        display={'flex'}
+                        flexDirection={'column'}
+                        gap={'20px'}
+                        height={'100%'}
+                        justifyContent={'space-between'}
+                    >
+                        <Flex
+                            gap={'20px'}
+                        >
+                            <Image
+                                src={profile}
+                                w={'100px'}
+                                h={'100px'}
+                                objectFit={'cover'}
+                                borderRadius={'100%'}
+                            ></Image>
+                            <Box>
+                                <Heading fontWeight={'400'} as={'h1'} color={'white'}>
+                                    Prathmesh Kumbhar
+                                </Heading>
+                                <Heading fontWeight={'400'} fontSize={'1.5rem'} color={'white'}>
+                                    Fullstack Developer
+                                </Heading>
+                            </Box>
+                        </Flex>
+                        <GithubStat />
+                        <GithubContributions />
+                    </Box>
                 </Box>
             </Box>
             <Box
