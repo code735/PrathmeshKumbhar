@@ -22,32 +22,45 @@ export default function About() {
             margin={"auto"}
             height={'100vh'}
             id="projects"
-            fontFamily={'EB Garamond, serif'}
         >
-            <Heading
-                fontSize={[".7rem", "", "", "", "2.5rem"]}
+            <VStack
+                py={'10'}
                 fontFamily={'EB Garamond, serif'}
-                textAlign={'center'}
-                py={'5'}
-                fontWeight={'400'}
             >
-                Projects I did to learn this technologies
-            </Heading>
-            <Box
-                border={`1px solid ${borderclr}`}
-            ></Box>
-            <Tabs position="relative" variant="unstyled" w={'100%'}>
+                <Heading
+                    fontSize={["1.7rem", "", "", "", "2.5rem"]}
+                    fontFamily={'EB Garamond, serif'}
+                    textAlign={'center'}
+                    py={'5'}
+                    fontWeight={'400'}
+                >
+                    Projects I did to learn this technologies
+                </Heading>
+                <Box color={borderclr}>
+                    <svg width="106" height="24" viewBox="0 0 106 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="12.5" x2="105" y2="12.5" stroke={borderclr} />
+                        <path d="M0.5 12.5L8 1.5L14 12.5" stroke={borderclr} />
+                        <path d="M27 13L34.5 2L40.5 13" stroke={borderclr} />
+                        <path d="M53 13L60.5 2L66.5 13" stroke={borderclr} />
+                        <path d="M79 13L86.5 2L92.5 13" stroke={borderclr} />
+                        <path d="M27.5 12L20 23L14 12" stroke={borderclr} />
+                        <path d="M53.5 12L46 23L40 12" stroke={borderclr} />
+                        <path d="M79.5 12L72 23L66 12" stroke={borderclr} />
+                        <path d="M105.5 12L98 23L92 12" stroke={borderclr} />
+                    </svg>
+                </Box>
+            </VStack>
+            <Tabs
+                variant='soft-rounded'
+                colorScheme='green'
+                w={['', '', '', '90%']}
+                margin={'auto'}
+            >
                 <TabList>
-                    <Tab>React JS</Tab>
+                    <Tab>ReactJS</Tab>
                     <Tab>Javascript</Tab>
-                    <Tab>HTML</Tab>
+                    <Tab>HTML & CSS</Tab>
                 </TabList>
-                <TabIndicator
-                    mt="-1.5px"
-                    height="2px"
-                    bg="blue.500"
-                    borderRadius="1px"
-                />
                 <TabPanels>
                     <TabPanel>
                         <p>one!</p>
