@@ -1,4 +1,3 @@
-import React from 'react'
 import { NAVBAR_BACKGROUND_BG, PRELOADER_TOGGLE } from './actiontype'
 
 const initialstate = {

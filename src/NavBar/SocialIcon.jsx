@@ -1,4 +1,4 @@
-import { Flex, Box, useColorModeValue } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import React from 'react'
 import { BsGithub, BsSlack } from 'react-icons/bs'
 import { ImLinkedin2 } from 'react-icons/im'
@@ -6,10 +6,10 @@ import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 export default function SocialIcon() {
-    const color = useColorModeValue("#11468F", "white")
-    const iconColor = useColorModeValue("white", "black")
-    const bg = useColorModeValue("black", "white")
-    const navbarbg = useColorModeValue("white", "black");
+    // const color = useColorModeValue("#11468F", "white")
+    // const iconColor = useColorModeValue("white", "black")
+    // const bg = useColorModeValue("black", "white")
+    // const navbarbg = useColorModeValue("white", "black");
 
     return (
         <motion.div
