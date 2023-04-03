@@ -4,7 +4,6 @@ import {
     VStack,
     useColorModeValue,
     Tab,
-    TabIndicator,
     Tabs,
     TabPanels,
     TabPanel,
@@ -15,6 +14,11 @@ import React from 'react'
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
     var borderclr = useColorModeValue("black", "white")
+    var projects = [
+        {
+            name: 'Zostel'
+        }
+    ]
     return (
         <Box
             w={'100%%'}
@@ -34,7 +38,7 @@ export default function About() {
                     py={'5'}
                     fontWeight={'400'}
                 >
-                    Projects I did to learn this technologies
+                    Projects
                 </Heading>
                 <Box color={borderclr}>
                     <svg width="106" height="24" viewBox="0 0 106 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,21 +59,21 @@ export default function About() {
                 colorScheme='green'
                 w={['', '', '', '90%']}
                 margin={'auto'}
+                border={`1px solid ${borderclr}`}
             >
-                <TabList>
-                    <Tab>ReactJS</Tab>
-                    <Tab>Javascript</Tab>
-                    <Tab>HTML & CSS</Tab>
+                <TabList
+                    borderBottom={`1px solid ${borderclr}`}
+                    p={'4'}
+                >
+                    <Tab>Frontend</Tab>
+                    <Tab>Fullstack</Tab>
                 </TabList>
-                <TabPanels>
+                <TabPanels p={'4'}>
                     <TabPanel>
-                        <p>one!</p>
+
                     </TabPanel>
                     <TabPanel>
-                        <p>two!</p>
-                    </TabPanel>
-                    <TabPanel>
-                        <p>three!</p>
+                        <h3>Fullstack Projects will be added soon!</h3>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
