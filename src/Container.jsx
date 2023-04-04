@@ -20,7 +20,7 @@ export default function Container() {
     useEffect(() => {
         setTimeout(() => {
             dispatch(PRELOADER_TOGGLE_FUNCTION(false));
-        }, 4000);
+        }, 6000);
     }, [togglepreloader])
 
     function handleScroll() {

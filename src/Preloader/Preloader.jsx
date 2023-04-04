@@ -10,7 +10,7 @@ export const Preloader = () => {
             if (percentage < 100) {
                 setPercentage((prevPercentage) => prevPercentage + 1);
             }
-        }, 10);
+        }, 50);
 
         return () => clearInterval(interval);
     }, [percentage]);

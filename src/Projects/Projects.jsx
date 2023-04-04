@@ -12,11 +12,13 @@ import {
 import React from 'react'
 import zostel from '../images/zostel.jpg'
 import zoomcar from '../images/zoomcar.png'
+import stanzaliving from '../images/stanzaliving.png'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
     var cardbordercolor = useColorModeValue("black", "white")
-    var cardColor = useColorModeValue("white", "#2d3748")
+    var cardColor = useColorModeValue("#ffd483", "#2d3748")
     var btncolor = useColorModeValue("white", "grey")
     var textcolor = useColorModeValue("black", "white")
 
@@ -34,6 +36,20 @@ export default function About() {
             techstack: ['ReactJS', 'AJAX', 'Router', 'Context API', 'Google Maps API'],
             link: "https://zoomcar-indol.vercel.app/",
             githubLink: 'https://github.com/code735/zoomcar'
+        },
+        {
+            name: "StanzaLiving",
+            img: stanzaliving,
+            techstack: ['Javascript', 'AJAX', 'Google Maps API', "Bootstrap"],
+            link: "https://code735.github.io/stanzaLiving/",
+            githubLink: 'https://github.com/code735/stanzaLiving'
+        },
+        {
+            name: "Nykaa",
+            img: stanzaliving,
+            techstack: ['Javascript', 'AJAX', 'Google Maps API', "Bootstrap"],
+            link: "https://code735.github.io/stanzaLiving/",
+            githubLink: 'https://github.com/code735/stanzaLiving'
         },
 
     ]
@@ -82,7 +98,9 @@ export default function About() {
                                     h={'60px'}
                                     borderRadius={'100%'}
                                 ></Image>
-                                <Heading>
+                                <Heading
+                                    textAlign={'center'}
+                                >
                                     {el.name} Clone
                                 </Heading>
                                 <Flex
@@ -96,19 +114,41 @@ export default function About() {
                                         })
                                     }
                                 </Flex>
-                                <a
-                                    href={el.link}
-                                    target='_blank'
+                                <Flex
+                                    alignItems={'center'}
+                                    gap={'20px'}
                                 >
-                                    <Button
-                                        w={'100%'}
-                                        bg={'transparent'}
-                                        color={textcolor}
-                                        border={`1px solid ${textcolor}`}
+                                    <a
+                                        href={el.link}
+                                        target='_blank'
                                     >
-                                        Visit Site
-                                    </Button>
-                                </a>
+                                        <Button
+                                            w={'100%'}
+                                            bg={'transparent'}
+                                            color={textcolor}
+                                            border={`1px solid ${textcolor}`}
+                                            display={'flex'}
+                                            alignItems={'center'}
+                                            gap={'10px'}
+                                        >
+                                            <Text>Visit Site</Text>
+                                            <ExternalLinkIcon />
+                                        </Button>
+                                    </a>
+                                    <a
+                                        href={el.link}
+                                        target='_blank'
+                                    >
+                                        <Button
+                                            w={'100%'}
+                                            bg={'transparent'}
+                                            color={textcolor}
+                                            border={`1px solid ${textcolor}`}
+                                        >
+                                            Repo Link
+                                        </Button>
+                                    </a>
+                                </Flex>
                             </Flex>
                         </GridItem>
                     })
