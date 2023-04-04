@@ -21,7 +21,7 @@ export default function Home() {
             id="home"
             bg={['transparent', '', '', '#000000c4']}
             border={'none'}
-            width={'100vw'}
+            width={'100%'}
         >
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
