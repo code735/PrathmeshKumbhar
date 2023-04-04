@@ -16,7 +16,7 @@ import zoomcar from '../images/zoomcar.png'
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
     var cardbordercolor = useColorModeValue("black", "white")
-    var cardColor = useColorModeValue("#EDECEC", "#2d3748")
+    var cardColor = useColorModeValue("white", "#2d3748")
     var btncolor = useColorModeValue("white", "grey")
     var textcolor = useColorModeValue("black", "white")
 
