@@ -32,6 +32,7 @@ export default function About() {
                     border={'2px solid white'}
                     width={'90%'}
                     height={'90%'}
+                    borderRadius={'10px'}
                 >
                     <Box
                         w={'90%'}
