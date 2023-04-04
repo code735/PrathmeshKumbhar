@@ -72,7 +72,8 @@ export default function About() {
                 <Heading
                     as={'h1'}
                     fontSize={['1.5rem', '', '', '2.5rem']}
-                    py={'2rem'}
+                    pb={'2rem'}
+                    pt={'4rem'}
                     textAlign={'center'}
                 >
                     Projects
