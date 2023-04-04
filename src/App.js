@@ -32,7 +32,6 @@ function App() {
             >
               <Button onClick={() => {
                 toggleColorMode();
-                dispatch(PRELOADER_TOGGLE_FUNCTION(true));
               }}
                 px="2"
                 bg={'black'}

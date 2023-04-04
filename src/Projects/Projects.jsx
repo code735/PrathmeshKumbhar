@@ -1,23 +1,41 @@
 import {
     Box,
-    Heading,
-    VStack,
+    GridItem,
+    Grid,
     useColorModeValue,
-    Tab,
-    Tabs,
-    TabPanels,
-    TabPanel,
-    TabList
+    Image,
+    Flex,
+    Heading,
+    Text,
+    Button
 } from '@chakra-ui/react'
 import React from 'react'
+import zostel from '../images/zostel.jpg'
+import zoomcar from '../images/zoomcar.png'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
-    var borderclr = useColorModeValue("black", "white")
+    var cardbordercolor = useColorModeValue("black", "white")
+    var cardColor = useColorModeValue("#EDECEC", "#2d3748")
+    var btncolor = useColorModeValue("white", "grey")
+    var textcolor = useColorModeValue("black", "white")
+
     var projects = [
         {
-            name: 'Zostel'
-        }
+            name: 'Zostel',
+            img: zostel,
+            techstack: ['ReactJS', 'ChakraUI', 'AJAX', 'Axios', 'Redux', 'Google Map API'],
+            link: 'https://zostel-ten.vercel.app/',
+            githubLink: 'https://github.com/code735/zostel'
+        },
+        {
+            name: "Zoomcar",
+            img: zoomcar,
+            techstack: ['ReactJS', 'AJAX', 'Router', 'Context API', 'Google Maps API'],
+            link: "https://zoomcar-indol.vercel.app/",
+            githubLink: 'https://github.com/code735/zoomcar'
+        },
+
     ]
     return (
         <Box
@@ -26,57 +44,76 @@ export default function About() {
             margin={"auto"}
             height={'100vh'}
             id="projects"
+            p={'5'}
         >
-            <VStack
-                py={'10'}
-                fontFamily={'EB Garamond, serif'}
+            <Heading
+                as={'h1'}
+                fontSize={['1rem', '', '', '2rem']}
+                py={'2rem'}
+                textAlign={'center'}
             >
-                <Heading
-                    fontSize={["1.7rem", "", "", "", "2.5rem"]}
-                    fontFamily={'EB Garamond, serif'}
-                    textAlign={'center'}
-                    py={'5'}
-                    fontWeight={'400'}
-                >
-                    Projects
-                </Heading>
-                <Box color={borderclr}>
-                    <svg width="106" height="24" viewBox="0 0 106 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="12.5" x2="105" y2="12.5" stroke={borderclr} />
-                        <path d="M0.5 12.5L8 1.5L14 12.5" stroke={borderclr} />
-                        <path d="M27 13L34.5 2L40.5 13" stroke={borderclr} />
-                        <path d="M53 13L60.5 2L66.5 13" stroke={borderclr} />
-                        <path d="M79 13L86.5 2L92.5 13" stroke={borderclr} />
-                        <path d="M27.5 12L20 23L14 12" stroke={borderclr} />
-                        <path d="M53.5 12L46 23L40 12" stroke={borderclr} />
-                        <path d="M79.5 12L72 23L66 12" stroke={borderclr} />
-                        <path d="M105.5 12L98 23L92 12" stroke={borderclr} />
-                    </svg>
-                </Box>
-            </VStack>
-            <Tabs
-                variant='soft-rounded'
-                colorScheme='green'
-                w={['', '', '', '90%']}
-                margin={'auto'}
-                border={`1px solid ${borderclr}`}
+                Projects
+            </Heading>
+            <Grid
+                templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', '', 'repeat(4, 1fr)']}
+                gap={5}
+                p={'4'}
             >
-                <TabList
-                    borderBottom={`1px solid ${borderclr}`}
-                    p={'4'}
-                >
-                    <Tab>Frontend</Tab>
-                    <Tab>Fullstack</Tab>
-                </TabList>
-                <TabPanels p={'4'}>
-                    <TabPanel>
-
-                    </TabPanel>
-                    <TabPanel>
-                        <h3>Fullstack Projects will be added soon!</h3>
-                    </TabPanel>
-                </TabPanels>
-            </Tabs>
+                {
+                    projects.map((el) => {
+                        return <GridItem
+                            w='100%'
+                            p={'5'}
+                            bg={cardColor}
+                            alignItems={'center'}
+                            borderRadius={'10px'}
+                        >
+                            <Flex
+                                flexDir={'column'}
+                                alignItems={'center'}
+                                gap={'20px'}
+                                h={'100%'}
+                                justifyContent={'space-between'}
+                            >
+                                <Image
+                                    src={el.img}
+                                    objectFit={'cover'}
+                                    w={'60px'}
+                                    h={'60px'}
+                                    borderRadius={'100%'}
+                                ></Image>
+                                <Heading>
+                                    {el.name} Clone
+                                </Heading>
+                                <Flex
+                                    flexWrap={'wrap'}
+                                    gap={'10px'}
+                                    justifyContent={'center'}
+                                >
+                                    {
+                                        el.techstack.map((e) => {
+                                            return <Text>{e}</Text>
+                                        })
+                                    }
+                                </Flex>
+                                <a
+                                    href={el.link}
+                                    target='_blank'
+                                >
+                                    <Button
+                                        w={'100%'}
+                                        bg={'transparent'}
+                                        color={textcolor}
+                                        border={`1px solid ${textcolor}`}
+                                    >
+                                        Visit Site
+                                    </Button>
+                                </a>
+                            </Flex>
+                        </GridItem>
+                    })
+                }
+            </Grid>
         </Box >
     )
 }
