@@ -2,7 +2,7 @@ import { NAVBAR_BACKGROUND_BG, PRELOADER_TOGGLE } from './actiontype'
 
 const initialstate = {
     togglepreloader: true,
-    navbarBg: false
+    navbarBg: true
 }
 
 export default function reducer(state = initialstate, { type, payload }) {
