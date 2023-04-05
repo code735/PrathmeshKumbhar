@@ -1,12 +1,24 @@
+import { useEffect, useState } from 'react';
 import GitHubCalendar from 'react-github-calendar'
 import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
 
 export function GithubContributions() {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    let [loading, setloading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setloading(false)
+        }, 1500);
+    }, [loading])
+
     return (
         <>
             <Button
-                onClick={onOpen}
+                onClick={() => {
+                    onOpen()
+                    setloading(true)
+                }}
                 bg={'transparent'}
                 borderRadius={'0'}
                 border={'2px solid white'}
@@ -25,7 +37,7 @@ export function GithubContributions() {
                     <ModalHeader>Github Contributions Last Year</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <GitHubCalendar username='code735' />
+                        {loading ? <h1>Loading...</h1> : <GitHubCalendar username='code735' />}
                     </ModalBody>
 
                     <ModalFooter>
