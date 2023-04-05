@@ -1,13 +1,17 @@
 import React, { useRef, useEffect } from 'react';
 import video from './video/bg.mp4'
 import { Box } from '@chakra-ui/react';
+import { useSelector } from 'react-redux';
 
 function VideoPlayer() {
     const videoRef = useRef(null);
+    let videoaction = useSelector(state => state.navbarBg)
+
+    console.log(videoaction)
 
     useEffect(() => {
-        videoRef.current.play();
-    }, []);
+        videoaction ? videoRef.current.play() : videoRef.current.pause();
+    }, [videoaction]);
 
     return (
         <Box display={["none", "", "", "block"]}>
