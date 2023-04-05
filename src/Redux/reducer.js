@@ -1,7 +1,7 @@
 import { NAVBAR_BACKGROUND_BG, PRELOADER_TOGGLE } from './actiontype'
 
 const initialstate = {
-    togglepreloader: false,
+    togglepreloader: true,
     navbarBg: false
 }
 
