@@ -71,7 +71,7 @@ export default function About() {
             <Box>
                 <Heading
                     as={'h1'}
-                    fontSize={['1.5rem', '', '', '2.5rem']}
+                    fontSize={['2rem', '', '', '2.5rem']}
                     pb={'2rem'}
                     pt={'4rem'}
                     textAlign={'center'}
@@ -79,7 +79,7 @@ export default function About() {
                     Projects
                 </Heading>
                 <Grid
-                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', '', 'repeat(3, 1fr)']}
+                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']}
                     gap={5}
                     p={'4'}
                 >
@@ -95,7 +95,7 @@ export default function About() {
                                 <Flex
                                     flexDir={'column'}
                                     alignItems={'center'}
-                                    gap={'20px'}
+                                    gap={'10px'}
                                     h={'100%'}
                                     justifyContent={'space-between'}
                                 >
@@ -109,7 +109,7 @@ export default function About() {
                                     ></Image>
                                     <Heading
                                         textAlign={'center'}
-                                        fontSize={['1rem', '', '', '1.5rem']}
+                                        fontSize={['1.2rem', '', '', '1.5rem']}
                                     >
                                         {el.name} Clone
                                     </Heading>
