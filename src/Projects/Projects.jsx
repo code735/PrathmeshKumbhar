@@ -63,17 +63,13 @@ export default function About() {
             height={'100vh'}
             id="projects"
             p={'5'}
-            display={'flex'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            justifyContent={'center'}
         >
             <Box>
                 <Heading
                     as={'h1'}
                     fontSize={['2rem', '', '', '2.5rem']}
                     pb={'2rem'}
-                    pt={'4rem'}
+                    pt={'2rem'}
                     textAlign={'center'}
                 >
                     Projects
