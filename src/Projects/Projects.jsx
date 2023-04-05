@@ -15,7 +15,7 @@ import zoomcar from '../images/zoomcar.png'
 import stanzaliving from '../images/stanzaliving.png'
 import nykaa from '../images/nykaa.png'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { BsLink } from 'react-icons/bs'
+import { BsGithub } from 'react-icons/bs'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
@@ -62,7 +62,7 @@ export default function About() {
             margin={"auto"}
             height={'100vh'}
             id="projects"
-            p={'5'}
+            p={['0', '', '5']}
         >
             <Box>
                 <Heading
@@ -75,9 +75,9 @@ export default function About() {
                     Projects
                 </Heading>
                 <Grid
-                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']}
+                    templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']}
                     gap={5}
-                    p={'4'}
+                    p={['1', '3', '4']}
                 >
                     {
                         projects.map((el) => {
@@ -101,11 +101,11 @@ export default function About() {
                                         w={'60px'}
                                         h={'60px'}
                                         borderRadius={'100%'}
-                                        display={['none', '', '', 'block']}
+                                        display={['none', '', '', '', 'block']}
                                     ></Image>
                                     <Heading
                                         textAlign={'center'}
-                                        fontSize={['1.2rem', '', '', '1.5rem']}
+                                        fontSize={['.8rem', '', '', '1rem', '1.5rem']}
                                     >
                                         {el.name} Clone
                                     </Heading>
@@ -113,7 +113,7 @@ export default function About() {
                                         flexWrap={'wrap'}
                                         gap={'10px'}
                                         justifyContent={'center'}
-                                        display={['none', '', '', 'flex']}
+                                        display={['none', '', '', '', 'flex']}
                                     >
                                         {
                                             el.techstack.map((e) => {
@@ -124,7 +124,6 @@ export default function About() {
                                     <Flex
                                         alignItems={'center'}
                                         gap={'20px'}
-                                        flexDir={['column', '', 'row']}
                                     >
                                         <a
                                             href={el.link}
@@ -139,9 +138,14 @@ export default function About() {
                                                 display={'flex'}
                                                 alignItems={'center'}
                                                 gap={'10px'}
+                                                p={['0', '', '10px']}
                                             >
-                                                <Text>Visit Site</Text>
-                                                <ExternalLinkIcon />
+                                                <Text
+                                                    display={['none', '', '', '', 'block']}
+                                                >Visit Site</Text>
+                                                <ExternalLinkIcon
+                                                    fontSize={['.8rem', '', '', '1rem']}
+                                                />
                                             </Button>
                                         </a>
                                         <a
@@ -157,9 +161,16 @@ export default function About() {
                                                 display={'flex'}
                                                 alignItems={'center'}
                                                 gap={'10px'}
+                                                p={['0', '', '10px']}
                                             >
-                                                <Text p={'0'}>Repo Link</Text>
-                                                <BsLink />
+                                                <Text p={'0'}
+                                                    display={['none', '', '', '', 'block']}
+                                                >Repo Link</Text>
+                                                <Text
+                                                    fontSize={['.8rem', '', '', '1rem']}
+                                                >
+                                                    <BsGithub />
+                                                </Text>
                                             </Button>
                                         </a>
                                     </Flex>
