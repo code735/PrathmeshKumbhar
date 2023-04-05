@@ -23,23 +23,6 @@ export default function Container() {
         }, 6000);
     }, [togglepreloader])
 
-    function handleScroll() {
-        const scrollTop = document.documentElement.scrollTop;
-        if (scrollTop === 0) {
-            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true));
-        } else if (scrollTop === 1000) {
-            dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(false));
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
-
-    useEffect(() => {
-        console.log(togglepreloader)
-    }, [togglepreloader])
 
     return (
         togglepreloader ? <Preloader /> : <Box height={"100vh"} className="parallax" >

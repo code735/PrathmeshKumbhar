@@ -1,14 +1,27 @@
 import React from 'react'
-import { Box, Heading, HStack, Image } from '@chakra-ui/react'
+import {
+    Box,
+    Heading,
+    HStack,
+    Image,
+    Button,
+    Text
+} from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/react'
+import { useDispatch, useSelector } from 'react-redux'
 import { motion } from 'framer-motion'
 import logo from '../images/logo.svg'
 import circle from '../images/circle.svg'
 import email from '../images/email.svg'
+import { AiOutlinePause } from 'react-icons/ai'
+import { BsFillPlayFill } from 'react-icons/bs'
+import { NAVBAR_BACKGROUND_BG_FUNCTION } from '../Redux/action'
 
 export default function Home() {
     var bg = useColorModeValue("wheat", "black")
     var color = useColorModeValue("white", "white")
+    let videoaction = useSelector(state => state.navbarBg)
+    let dispatch = useDispatch();
 
     return (
         <Box
@@ -87,7 +100,28 @@ export default function Home() {
                     </Box>
                 </Box>
             </Box>
-
+            <Button
+                position={'absolute'}
+                bottom={['16%', '', '', '13%']}
+                right={['20%', '', '', '15%']}
+                display={['none', '', '', 'flex']}
+                alignItems={'center'}
+                gap={'10px'}
+                borderRadius={'none'}
+                cursor={'pointer'}
+                onClick={() => {
+                    videoaction ? dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(false)) : dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true))
+                }}
+            >
+                <Text
+                    fontSize={'1.3rem'}
+                >{videoaction ? "Pause" : "Play"}</Text>
+                {videoaction ? <AiOutlinePause
+                    fontSize={'1.5rem'}
+                /> : <BsFillPlayFill
+                    fontSize={'1.5rem'}
+                />}
+            </Button>
             <Box
                 position={'absolute'}
                 display={["none", "", "", "block"]}
