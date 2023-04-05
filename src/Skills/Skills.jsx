@@ -12,7 +12,7 @@ import { ImCss3, ImHtmlFive } from 'react-icons/im'
 import { FaJava } from 'react-icons/fa'
 
 export default function Skills() {
-    var bg = useColorModeValue("wheat", "#1A202C")
+    var bg = useColorModeValue("wheat", "black")
     var data = [
         {
             icon: <GrReactjs />,
@@ -41,7 +41,7 @@ export default function Skills() {
     ]
 
     return (
-        <Box w={'100%'} margin={"auto"} bg={'#000000c4'} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="skills">
+        <Box w={'100%'} border={[`10px solid ${bg}`, `30px solid ${bg}`,]} margin={"auto"} bg={'#000000c4'} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="skills">
             <Grid
                 templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)']}
                 gap={5}
@@ -52,7 +52,7 @@ export default function Skills() {
                             <Box
                                 fontSize={'3rem'}
                                 p={'3'}
-                                border={'3px solid white'}
+                                border={'2px solid white'}
                                 borderRadius={'10px'}
                                 color={'white'}
                             >{el.icon}</Box>
