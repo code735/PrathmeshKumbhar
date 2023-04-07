@@ -32,7 +32,7 @@ export default function Home() {
             justifyContent={"center"}
             alignItems={"center"}
             id="home"
-            bg={['transparent', '', '', '#000000c4']}
+            bg={['transparent', '', '', '']}
             border={'none'}
             width={'100%'}
         >
@@ -56,11 +56,15 @@ export default function Home() {
                     </Heading>
                 </HStack>
                 <a href="#projects" className='project_btn' style={{
-                    border: "2px solid white",
+                    border: "2px solid",
                     padding: "10px 20px",
                     transition: ".6s",
-                    margin: "2rem 0"
-                }}>
+                    margin: "2rem 0",
+                    background: 'black',
+                    borderColor: 'black',
+                    color: 'white',
+                }}
+                >
                     <Heading as='h1'
                         fontSize={".8rem"}
                         fontWeight={'900'}
@@ -100,34 +104,6 @@ export default function Home() {
                     </Box>
                 </Box>
             </Box>
-            <Button
-                position={'absolute'}
-                bottom={['16%', '', '', '13%']}
-                right={['20%', '', '', '15%']}
-                display={['none', '', '', 'flex']}
-                alignItems={'center'}
-                gap={'10px'}
-                borderRadius={'none'}
-                background={"#ffffff14"}
-                color={'white'}
-                _hover={{
-                    color: "black",
-                    background: "white"
-                }}
-                cursor={'pointer'}
-                onClick={() => {
-                    videoaction ? dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(false)) : dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true))
-                }}
-            >
-                <Text
-                    fontSize={'1.3rem'}
-                >{videoaction ? "Pause" : "Play"}</Text>
-                {videoaction ? <AiOutlinePause
-                    fontSize={'1.5rem'}
-                /> : <BsFillPlayFill
-                    fontSize={'1.4rem'}
-                />}
-            </Button>
             <Box
                 position={'absolute'}
                 display={["none", "", "", "block"]}
