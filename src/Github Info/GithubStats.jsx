@@ -20,16 +20,16 @@ export const GithubStat = () => {
                 justifyContent={'space-between'}
                 color={'white'}
             >
-                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'100'} fontSize={['1rem', '', '', '2rem']} fontFamily={'EB Garamond, serif'}>
                     Username : {userData.username}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'100'} fontSize={['1rem', '', '', '2rem']} fontFamily={'EB Garamond, serif'}>
                     Followers : {userData.followers}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'100'} fontSize={['1rem', '', '', '2rem']} fontFamily={'EB Garamond, serif'}>
                     Repositories : {userData.public_repos}
                 </Heading>
-                <Heading as={'h3'} fontWeight={'200'} fontSize={['1rem', '', '', '2rem']}>
+                <Heading as={'h3'} fontWeight={'100'} fontSize={['1rem', '', '', '2rem']} fontFamily={'EB Garamond, serif'}>
                     Forks : {userData.total_forks}
                 </Heading>
             </Flex>
