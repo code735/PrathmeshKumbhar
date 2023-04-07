@@ -68,12 +68,15 @@ export default function About() {
                 <Heading
                     as={'h1'}
                     fontSize={['2rem', '', '', '2.5rem']}
-                    pb={'2rem'}
+                    pb={'10px'}
                     pt={'2rem'}
                     textAlign={'center'}
+                    fontFamily={'EB Garamond, serif'}
+                    fontWeight={'400'}
                 >
                     Projects
                 </Heading>
+                <Box borderBottom={'1px solid'} w={'150px'} margin={"auto"} mb={'2rem'}></Box>
                 <Grid
                     templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']}
                     gap={5}
@@ -86,7 +89,6 @@ export default function About() {
                                 p={'5'}
                                 bg={cardColor}
                                 alignItems={'center'}
-                                borderRadius={'10px'}
                             >
                                 <Flex
                                     flexDir={'column'}
@@ -106,6 +108,8 @@ export default function About() {
                                     <Heading
                                         textAlign={'center'}
                                         fontSize={['.8rem', '', '', '1rem', '1.5rem']}
+                                        fontFamily={'EB Garamond, serif'}
+                                        fontWeight={'400'}
                                     >
                                         {el.name} Clone
                                     </Heading>
@@ -139,12 +143,15 @@ export default function About() {
                                                 alignItems={'center'}
                                                 gap={'10px'}
                                                 p={['0', '', '10px']}
+                                                borderRadius={'0'}
                                             >
                                                 <Text
                                                     display={['none', '', '', '', 'block']}
+                                                    fontWeight={'400'}
                                                 >Visit Site</Text>
                                                 <ExternalLinkIcon
                                                     fontSize={['.8rem', '', '', '1rem']}
+                                                    fontWeight={'400'}
                                                 />
                                             </Button>
                                         </a>
@@ -162,12 +169,16 @@ export default function About() {
                                                 alignItems={'center'}
                                                 gap={'10px'}
                                                 p={['0', '', '10px']}
+                                                borderRadius={'0'}
+                                                fontweight={'400'}
                                             >
                                                 <Text p={'0'}
                                                     display={['none', '', '', '', 'block']}
+                                                    fontWeight={'400'}
                                                 >Repo Link</Text>
                                                 <Text
                                                     fontSize={['.8rem', '', '', '1rem']}
+                                                    fontWeight={'400'}
                                                 >
                                                     <BsGithub />
                                                 </Text>
