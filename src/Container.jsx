@@ -8,7 +8,7 @@ import { Preloader } from './Preloader/Preloader'
 import { useSelector, useDispatch } from 'react-redux'
 import { PRELOADER_TOGGLE_FUNCTION } from './Redux/action'
 import lightmountain from './images/light.jpg'
-import Loading from './images/loading.svg'
+import Loading from './images/Loading.gif'
 import VideoPlayer from './Videoplayer/VideoPlayer'
 
 export default function Container() {

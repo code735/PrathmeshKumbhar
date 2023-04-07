@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
-import Loading from '../images/loading.svg'
 import { useSelector } from 'react-redux';
 
 function VideoPlayer() {
