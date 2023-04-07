@@ -55,7 +55,7 @@ export default function Container() {
                 zIndex='-2'
                 display={['none', '', '', 'block']}
             >
-                <VideoPlayer />
+                {/* <VideoPlayer /> */}
             </Box>
         </Box>
     )
