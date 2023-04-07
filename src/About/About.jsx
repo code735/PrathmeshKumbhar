@@ -42,6 +42,7 @@ export default function About() {
                         gap={'20px'}
                         height={'100%'}
                         justifyContent={'space-between'}
+                        position={'relative'}
                     >
                         <Flex
                             gap={'20px'}

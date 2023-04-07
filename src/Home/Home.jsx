@@ -125,7 +125,7 @@ export default function Home() {
                 {videoaction ? <AiOutlinePause
                     fontSize={'1.5rem'}
                 /> : <BsFillPlayFill
-                    fontSize={'1.3rem'}
+                    fontSize={'1.4rem'}
                 />}
             </Button>
             <Box
