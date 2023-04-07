@@ -48,6 +48,7 @@ export default function Container() {
                 top="0"
                 bgImage={`url(${Loading})`}
                 bgSize={'cover'}
+                bgPosition={'center'}
                 bgRepeat="no-repeat"
                 w={'100%'}
                 h={'100vh'}

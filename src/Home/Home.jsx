@@ -48,10 +48,10 @@ export default function Home() {
                 }}
             >
                 <HStack justifyContent={"center"} alignItems={"center"} w="100%">
-                    <Heading as='h1' color={color} fontSize={["1.5rem", "2rem", "3rem"]}>
+                    <Heading as='h1' color={color} fontSize={["1.5rem", "2rem", "3rem"]} fontFamily={'EB Garamond, serif'} fontWeight={'400'}>
                         Prathmesh
                     </Heading>
-                    <Heading color={color} fontSize={["1.5rem", "2rem", "3rem"]}>
+                    <Heading color={color} fontSize={["1.5rem", "2rem", "3rem"]} fontFamily={'EB Garamond, serif'} fontWeight={'400'}>
                         Kumbhar
                     </Heading>
                 </HStack>
@@ -108,6 +108,12 @@ export default function Home() {
                 alignItems={'center'}
                 gap={'10px'}
                 borderRadius={'none'}
+                background={"#ffffff14"}
+                color={'white'}
+                _hover={{
+                    color: "black",
+                    background: "white"
+                }}
                 cursor={'pointer'}
                 onClick={() => {
                     videoaction ? dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(false)) : dispatch(NAVBAR_BACKGROUND_BG_FUNCTION(true))
@@ -119,7 +125,7 @@ export default function Home() {
                 {videoaction ? <AiOutlinePause
                     fontSize={'1.5rem'}
                 /> : <BsFillPlayFill
-                    fontSize={'1.5rem'}
+                    fontSize={'1.3rem'}
                 />}
             </Button>
             <Box

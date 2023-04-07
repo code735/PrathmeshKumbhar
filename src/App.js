@@ -24,9 +24,11 @@ function App() {
       <Box position={'fixed'} w={['100%']} margin={'auto'} py={'2'} zIndex='1' id='myDiv'>
         <motion.div>
           <Flex alignItems="center" justifyContent="space-between" bg={'transparent'} gap="10px" margin="0 auto" padding='5px 30px'>
-            <Button display={["none", "", "", "block"]} bg={'black'} p={'2'}>
-              <Image src={logo} ></Image>
-            </Button>
+            <a href='#home'>
+              <Button display={["none", "", "", "block"]} bg={'black'} p={'2'}>
+                <Image src={logo} ></Image>
+              </Button>
+            </a>
             <Flex
               gap={'20px'}
             >
