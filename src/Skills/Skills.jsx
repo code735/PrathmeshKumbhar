@@ -41,7 +41,7 @@ export default function Skills() {
     ]
 
     return (
-        <Box w={'100%'} border={[`10px solid ${bg}`, `30px solid ${bg}`,]} margin={"auto"} bg={'#000000c4'} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="skills">
+        <Box w={'100%'} margin={"auto"} bg={'#000000c4'} height={'100vh'} display={"flex"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} id="skills">
             <Grid
                 templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)']}
                 gap={5}
