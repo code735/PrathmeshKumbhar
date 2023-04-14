@@ -107,7 +107,6 @@ export default function About() {
                                     <Text
                                         display={['none', '', '-webkit-box', '']}
                                         css={{ WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
-                                        fontFamily={'EB Garamond, serif'}
                                     >
                                         {el.desc}
                                     </Text>
