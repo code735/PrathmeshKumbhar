@@ -8,11 +8,10 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import React from 'react'
-import { GrReactjs } from 'react-icons/gr'
 import { FiFigma } from 'react-icons/fi'
 import { SiChakraui, SiRedux, SiReactrouter } from 'react-icons/si'
 import { TfiCss3 } from 'react-icons/tfi'
-import { RiHtml5Line } from 'react-icons/ri'
+import { RiHtml5Line, RiReactjsLine } from 'react-icons/ri'
 import { FaJava } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 
@@ -20,49 +19,49 @@ export default function Skills() {
     var bg = useColorModeValue("wheat", "black")
     var data = [
         {
-            icon: <GrReactjs />,
+            icon: <RiReactjsLine />,
             name: "ReactJS",
-            color: "black"
+            color: "white"
         },
         {
             icon: <IoLogoJavascript />,
             name: "Javascript",
-            color: "black"
+            color: "white"
         },
         {
             icon: <RiHtml5Line />,
             name: "HTML5",
-            color: "black"
+            color: "white"
         },
         {
             icon: <TfiCss3 />,
             name: "CSS3",
-            color: "black"
+            color: "white"
         },
         {
             icon: <FaJava />,
             name: "Java",
-            color: "black"
+            color: "white"
         },
         {
             icon: <FiFigma />,
             name: "Figma",
-            color: "black"
+            color: "white"
         },
         {
             icon: <SiChakraui />,
             name: "ChakraUI",
-            color: "black"
+            color: "white"
         },
         {
             icon: <SiReactrouter />,
             name: "React Router",
-            color: "black"
+            color: "white"
         },
         {
             icon: <SiRedux />,
             name: "React Redux",
-            color: "black"
+            color: "white"
         }
     ]
 
@@ -112,11 +111,10 @@ export default function Skills() {
                         {
                             data.map((e) => {
                                 return <GridItem
-                                    color={e.color}
                                     fontSize={'3rem'}
-                                    bg={'white'}
                                     p={'20px'}
                                     borderRadius={'7px'}
+                                    color={e.color}
                                 > {e.icon}</GridItem>
                             })
                         }
