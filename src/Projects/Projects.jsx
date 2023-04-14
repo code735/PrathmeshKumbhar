@@ -15,14 +15,11 @@ import zoomcar from '../images/zoomcar.png'
 import stanzaliving from '../images/stanzaliving.png'
 import nykaa from '../images/nykaa.png'
 import { useNavigate } from 'react-router-dom'
-import { FaGithub, FaLink } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { BsGlobeCentralSouthAsia } from 'react-icons/bs'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
-    var cardbordercolor = useColorModeValue("black", "white")
-    var cardColor = useColorModeValue("#ffd483", "#2d3748")
-    var btncolor = useColorModeValue("white", "grey")
-    var textcolor = useColorModeValue("black", "white")
     var navigate = useNavigate();
 
     var projects = [
@@ -83,40 +80,54 @@ export default function About() {
                 </Heading>
                 <Box borderBottom={'1px solid'} w={'150px'} margin={"auto"} mb={'2rem'}></Box>
                 <Grid
-                    templateColumns={['repeat(2, 1fr)', 'repeat(4, 1fr)', 'repeat(4, 1fr)', '']}
-                    gap={2}
-                    p={['1', '3', '4']}
+                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)',]}
+                    gap={5}
+                    p={['3', '3', '4']}
                 >
                     {projects.map((el) => {
                         return (
                             <GridItem
                                 w='100%'
-                                bgSize={'cover'}
-                                bgRepeat={'no-repeat'}
+                                bg={'white'}
                                 alignItems={'center'}
-                                border={'1px solid grey'}
-                                borderRadius={'2'}
+                                borderRadius={'20'}
+                                px={['5', '', '', '10']}
+                                py={['2', '5', '2', '5']}
+                                color={'black'}
                             >
-                                <Image src={el.cardimg} objectFit={'cover'} h={["80%", '60%', '', "70%"]} />
                                 <Flex
                                     flexDir={'column'}
                                     gap={['0px', '', '', '10px']}
                                     p={['1', '', '', '2']}
                                 >
-                                    <Text fontWeight={'bold'}>{el.name} Clone</Text>
+                                    <Flex
+                                        alignItems={'center'}
+                                        gap={'15px'}
+                                    >
+                                        <Image
+                                            src={el.logo}
+                                            width={['30px', '25px', '40px']}
+                                            borderRadius={'50%'}
+                                        ></Image>
+                                        <Text
+                                            fontWeight={'bold'}
+                                            fontSize={['1rem', '', '1.1rem']}
+                                        >{el.name} Clone</Text>
+                                    </Flex>
                                     <Text
                                         display={['none', '', '-webkit-box', '']}
-                                        css={{ WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                                        css={{ WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
                                     >
                                         {el.desc}
                                     </Text>
                                     <Box
-                                        display={['none', '', '', 'flex']}
+                                        display={['flex', '', '', 'flex']}
                                         alignItems={'center'}
                                         gap={'10px'}
+                                        pt={['5', '', '4']}
+                                        fontSize={['1rem', '', '1.5rem']}
                                     >
                                         <FaGithub
-                                            fontSize={'1.2rem'}
                                             onClick={() => {
                                                 window.open(el.githubLink, "_blank")
                                             }}
@@ -127,8 +138,7 @@ export default function About() {
                                                 e.currentTarget.style.cursor = "normal"
                                             }}
                                         />
-                                        <FaLink
-                                            fontSize={'1.2rem'}
+                                        <BsGlobeCentralSouthAsia
                                             onClick={() => {
                                                 window.open(el.link, "_blank")
                                             }}

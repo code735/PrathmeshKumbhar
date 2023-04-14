@@ -12,7 +12,7 @@ import { FiFigma } from 'react-icons/fi'
 import { SiChakraui, SiRedux, SiReactrouter } from 'react-icons/si'
 import { TfiCss3 } from 'react-icons/tfi'
 import { RiHtml5Line, RiReactjsLine } from 'react-icons/ri'
-import { FaJava } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 
 export default function Skills() {
@@ -39,8 +39,8 @@ export default function Skills() {
             color: "white"
         },
         {
-            icon: <FaJava />,
-            name: "Java",
+            icon: <FaGithub />,
+            name: "Github",
             color: "white"
         },
         {
@@ -96,10 +96,10 @@ export default function Skills() {
                 </Box>
                 <Box
                     bg={'#ffffff0d'}
-                    margin={'1.5rem'}
+                    margin={'1.8rem'}
                     backdropFilter={'blur(10px)'}
                     w={['100%', '', "50%"]}
-                    display={'flex'}
+                    display={['none', '', '', 'flex']}
                     justifyContent={'center'}
                     flexDir={'column'}
                     alignItems={'center'}
