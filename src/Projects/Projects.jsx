@@ -21,7 +21,7 @@ import { BsGlobeCentralSouthAsia } from 'react-icons/bs'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
-    var cardcolor = useColorModeValue('white', '#1e1e1e')
+    var cardcolor = useColorModeValue('#e7c991', '#1e1e1e')
     var card_text_color = useColorModeValue("black", 'white')
     var navigate = useNavigate();
 
@@ -30,7 +30,7 @@ export default function About() {
             name: 'Zostel',
             logo: zostel,
             cardimg: "https://img.etimg.com/thumb/msid-72463946,width-1200,height-900,imgsize-1057355,resizemode-8,quality-100/prime/technology-and-startups/hostel-chain-pioneer-zostel-is-boxed-into-a-corner-explores-new-products-in-the-indian-travel-market.jpg",
-            desc: "Zostel is a network of hostels and homes in India. It has presence in 44 cities in India and Nepal",
+            desc: "A pioneer of the new-age travel culture in India, Zostel is also the world's largest chain of experiential stays. Stay with us at 75+ destinations across India and Nepal, exploring remote locations, remote parts of famous locations, and unconventional experiences on your holiday. Our range of accommodations includes social backpacker hostels, cultural and private Zostel Homes, and luxurious Zostel Plus stays.",
             link: 'https://zostel-ten.vercel.app/',
             githubLink: 'https://github.com/code735/zostel'
         },
@@ -54,7 +54,7 @@ export default function About() {
             name: "Nykaa",
             logo: nykaa,
             cardimg: "https://media.glassdoor.com/lst2x/797724/fsn-ecommerce-ventures-office.jpg",
-            desc: "Nykaa is an Indian e-commerce company, founded by Falguni Nayar in 2012 and headquartered in Mumbai.",
+            desc: "Nykaa is an Indian e-commerce company, founded by Falguni Nayar in 2012 and headquartered in Mumbai. It sells beauty, wellness and fashion products across websites, mobile apps and 100+ offline stores. In 2020, it became the first Indian unicorn startup headed by a woman.",
             link: "https://code735.github.io/Nykaa_Clone/",
             githubLink: 'https://github.com/code735/Nykaa_Clone'
         },
@@ -96,7 +96,6 @@ export default function About() {
                                 px={['5', '', '', '7']}
                                 py={['2', '5', '2', '3']}
                                 color={card_text_color}
-                                borderRadius={'10'}
                             >
                                 <Flex
                                     flexDir={'column'}
@@ -119,7 +118,7 @@ export default function About() {
                                     </Flex>
                                     <Text
                                         display={['none', '', '-webkit-box', '']}
-                                        css={{ WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                                        css={{ WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
                                     >
                                         {el.desc}
                                     </Text>
