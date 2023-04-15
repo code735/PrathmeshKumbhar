@@ -47,9 +47,7 @@ export default function Container() {
                 position={'fixed'}
                 top="0"
                 src={Loading}
-                bgSize={'cover'}
-                bgPosition={'center'}
-                bgRepeat="no-repeat"
+                objectFit={'cover'}
                 w={'100%'}
                 h={'100vh'}
                 zIndex='-2'

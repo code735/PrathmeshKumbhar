@@ -5,7 +5,8 @@ import {
     Flex,
     Heading,
     Text,
-    useColorModeValue
+    useColorModeValue,
+    VStack
 } from '@chakra-ui/react'
 import React from 'react'
 import { FiFigma } from 'react-icons/fi'
@@ -110,12 +111,23 @@ export default function Skills() {
                     >
                         {
                             data.map((e) => {
-                                return <GridItem
-                                    fontSize={'3rem'}
-                                    p={'20px'}
-                                    borderRadius={'7px'}
-                                    color={e.color}
-                                > {e.icon}</GridItem>
+                                return <GridItem>
+                                    <VStack
+                                        alignItems={'center'}
+                                    >
+                                        <Box
+                                            fontSize={'3rem'}
+                                            p={'20px'}
+                                            borderRadius={'7px'}
+                                            color={e.color}
+                                        >
+                                            {e.icon}
+                                        </Box>
+                                        <Text
+                                            color={e.color}
+                                        >{e.name}</Text>
+                                    </VStack>
+                                </GridItem>
                             })
                         }
                     </Grid>
