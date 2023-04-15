@@ -1,5 +1,5 @@
 import React, { useEffect, } from 'react'
-import { Box, useColorModeValue } from '@chakra-ui/react'
+import { Box, useColorModeValue, Image } from '@chakra-ui/react'
 import Home from './Home/Home'
 import About from './About/About'
 import Projects from './Projects/Projects'
@@ -42,11 +42,11 @@ export default function Container() {
                 display={['', '', '', 'none']}
             >
             </Box>
-            <Box
+            <Image
                 className='sticky-img'
                 position={'fixed'}
                 top="0"
-                bgImage={`url(${Loading})`}
+                src={Loading}
                 bgSize={'cover'}
                 bgPosition={'center'}
                 bgRepeat="no-repeat"
@@ -54,9 +54,10 @@ export default function Container() {
                 h={'100vh'}
                 zIndex='-2'
                 display={['none', '', '', 'block']}
+                fallbackSrc='https://cdn.dribbble.com/users/989157/screenshots/4632455/media/71cd58426c6661da6ab7f101473e0c26.gif'
             >
                 {/* <VideoPlayer /> */}
-            </Box>
+            </Image>
         </Box>
     )
 }
