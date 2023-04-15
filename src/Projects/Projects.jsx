@@ -7,7 +7,8 @@ import {
     Flex,
     Heading,
     Text,
-    Button
+    Button,
+    useColorMode
 } from '@chakra-ui/react'
 import React from 'react'
 import zostel from '../images/zostel.jpg'
@@ -20,6 +21,8 @@ import { BsGlobeCentralSouthAsia } from 'react-icons/bs'
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
+    var cardcolor = useColorModeValue('white', '#1e1e1e')
+    var card_text_color = useColorModeValue("black", 'white')
     var navigate = useNavigate();
 
     var projects = [
@@ -80,7 +83,7 @@ export default function About() {
                 </Heading>
                 <Box borderBottom={'1px solid'} w={'150px'} margin={"auto"} mb={'2rem'}></Box>
                 <Grid
-                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)',]}
+                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', '',]}
                     gap={5}
                     p={['3', '3', '4']}
                 >
@@ -88,12 +91,12 @@ export default function About() {
                         return (
                             <GridItem
                                 w='100%'
-                                bg={'white'}
+                                bg={cardcolor}
                                 alignItems={'center'}
-                                borderRadius={'20'}
-                                px={['5', '', '', '10']}
-                                py={['2', '5', '2', '5']}
-                                color={'black'}
+                                px={['5', '', '', '7']}
+                                py={['2', '5', '2', '3']}
+                                color={card_text_color}
+                                borderRadius={'10'}
                             >
                                 <Flex
                                     flexDir={'column'}
@@ -124,8 +127,8 @@ export default function About() {
                                         display={['flex', '', '', 'flex']}
                                         alignItems={'center'}
                                         gap={'10px'}
-                                        pt={['5', '', '4']}
-                                        fontSize={['1rem', '', '1.5rem']}
+                                        pt={['5', '', '2']}
+                                        fontSize={['1rem', '', '1.2rem']}
                                     >
                                         <FaGithub
                                             onClick={() => {
