@@ -83,7 +83,7 @@ export default function About() {
                 </Heading>
                 <Box borderBottom={'1px solid'} w={'150px'} margin={"auto"} mb={'2rem'}></Box>
                 <Grid
-                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', '',]}
+                    templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', '', '', 'repeat(4, 1fr)']}
                     gap={5}
                     p={['3', '3', '4']}
                 >
@@ -119,7 +119,7 @@ export default function About() {
                                     </Flex>
                                     <Text
                                         display={['none', '', '-webkit-box', '']}
-                                        css={{ WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                                        css={{ WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
                                     >
                                         {el.desc}
                                     </Text>
