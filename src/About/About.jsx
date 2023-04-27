@@ -11,11 +11,13 @@ import about from '../images/about.jpg'
 import profile from '../images/profile.jpg'
 import { GithubStat } from '../Github Info/GithubStats'
 import { GithubContributions } from '../Github Info/GithubCalender'
+import TextTrail from '../TextTrail'
+
 
 export default function About() {
     var bg = useColorModeValue("wheat", "black")
     var textColor = useColorModeValue("black", "white")
-
+    var name = ["Prathmesh", "Kumbhar"];
     return (
 
         <Flex>
@@ -58,7 +60,7 @@ export default function About() {
                                 <Heading fontWeight={'200'} as={'h1'} color={'white'}
                                     fontFamily={'EB Garamond, serif'}
                                 >
-                                    Prathmesh Kumbhar
+                                    <TextTrail items={name} />
                                 </Heading>
                                 <Heading fontWeight={'200'} fontSize={'1.5rem'} color={'white'}
                                     fontFamily={'EB Garamond, serif'}
