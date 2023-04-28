@@ -16,6 +16,7 @@ import email from '../images/email.svg'
 import { AiOutlinePause } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 import { NAVBAR_BACKGROUND_BG_FUNCTION } from '../Redux/action'
+import resume from './Resume.pdf'
 
 export default function Home() {
     var bg = useColorModeValue("wheat", "black")
@@ -55,7 +56,9 @@ export default function Home() {
                         Kumbhar
                     </Heading>
                 </HStack>
-                <a href="#projects" className='project_btn' style={{
+                <a onClick={() => {
+                    window.open(resume);
+                }} className='project_btn' style={{
                     border: "2px solid",
                     padding: "10px 20px",
                     transition: ".6s",
@@ -66,12 +69,13 @@ export default function Home() {
                 }}
                 >
                     <Heading as='h1'
-                        fontSize={".8rem"}
+                        fontSize={"1rem"}
                         fontWeight={'900'}
                         letterSpacing={'3px'}
                         fontFamily={'Lato, sans-serif'}
+                        textTransform={'uppercase'}
                     >
-                        PROJECTS
+                        Resume
                     </Heading>
                 </a>
             </motion.div >
